@@ -15,27 +15,34 @@ body {
   width: 100vw;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 10px 500px 1fr 1fr 15px;
-  /* grid-template:
-    "nav             nav"
-    "animation       animation"
-    "introduction    introduction"
-    "projects        projects"
-    "footer          footer"; */
+  grid-template-rows: 15px 1fr 1fr 1fr 15px;
+
   grid-template:
     "nav"
     "animation"
     "introduction"
     "projects"
     "footer";
+
+  background: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%);
+  color: white;
 }
 
 nav {
   grid-area: nav;
   display: flex;
-  justify-content: flex-end;
-  margin: 1rem 2rem;
-  font-size: 4rem;
+  justify-content: center;
+  padding: 0 2rem;
+  font-size: 3rem;
+  background-color: white;
+}
+
+nav div {
+  align-self: center;
+}
+
+.links a i {
+  color: violet;
 }
 
 .animation {
@@ -44,11 +51,10 @@ nav {
   font-family: "Orbitron", sans-serif;
   display: flex;
   flex-wrap: wrap;
-  font-size: 2rem;
 }
 
-.animation div:nth-of-type(2) {
-  font-size: 1.8rem;
+.animation h1 span {
+  color: blueviolet;
 }
 
 .introduction {
@@ -70,12 +76,20 @@ nav {
 .projects h2 {
   margin-bottom: 2rem;
 }
+.projects h2 a {
+  color: blueviolet;
+  text-decoration: none;
+}
+
+.projects h2 a:hover {
+  color: white;
+  transition: 3s;
+  /* transform: rotate(0.75turn) scale(1.25); */
+}
 
 footer {
   grid-area: footer;
-  background-color: lightpink;
   display: flex;
   justify-content: center;
   align-self: center;
-  line-height: 5rem;
 }
