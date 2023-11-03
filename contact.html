@@ -5,11 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Page</title>
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style2.css" />
   </head>
   <body>
+    <h1>Let's get in touch! 🤝</h1>
     <form action="" method="post">
-      <legend></legend>
+      <label for="Name">Tell me your name:</label>
+      <input
+        type="text"
+        name="Name"
+        id="name"
+        placeholder="your name goes here"
+        required
+      />
+      <label for="Email">Your Email:</label>
+      <input
+        type="email"
+        name="Email"
+        id="email"
+        placeholder="your best email goes here 😜"
+        required
+      />
+      <label for="Contact">Tell me, how can I help you:</label>
+      <textarea name="Contact" id="contact" cols="30" rows="10"></textarea>
+      <button>Send</button>
     </form>
+    <h4>but it's ok to send me an email to polianaschuelter@gmail.com</h4>
   </body>
 </html>
