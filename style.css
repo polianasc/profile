@@ -40,6 +40,26 @@ header,
 }
 nav {
   grid-area: nav;
+  font-size: 1.6rem;
+}
+
+nav a {
+  border: 1px solid blueviolet;
+  padding: 3px 2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  color: blueviolet;
+}
+
+nav a:hover {
+  background-color: blueviolet;
+  color: white;
+  transition: 0.8s;
+  border: 2px solid white;
+}
+
+.nav-item a:hover {
+  color: white;
 }
 
 /* .links a i {
@@ -60,7 +80,6 @@ nav {
   grid-area: animation;
   margin: 0 7rem;
   /* font-family: "Orbitron", sans-serif; */
-  font-size: 10rem;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -68,19 +87,53 @@ nav {
 }
 
 .photo {
-  height: 10rem;
-  width: 10rem;
+  height: 5rem;
+  width: 5rem;
   border-radius: 50%;
   background-color: blueviolet;
   align-self: flex-end;
+  animation-name: jumpCircle;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
 }
 
-.animation h1 {
-  font-size: 5rem;
+.animation div {
+  font-size: 35rem;
   font-style: bold;
 }
-.animation h1 span {
+/* .animation h1 span {
   color: blueviolet;
+} */
+
+.container-hey {
+  color: blueviolet;
+  animation-name: lighting;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.container-name {
+  color: blueviolet;
+  display: flex;
+  justify-content: center;
+}
+.container-name div {
+  animation-name: jumping;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.container-name div:nth-of-type(2) {
+  font-size: 25rem;
+  align-self: center;
+  animation-delay: 0.3s;
+}
+.container-name div:nth-of-type(3) {
+  animation-delay: 0.5s;
+}
+.container-name div:nth-of-type(4) {
+  font-size: 25rem;
+  animation-delay: 0.7s;
 }
 
 .introduction {
@@ -88,6 +141,7 @@ nav {
   margin: 6rem;
   padding: 0 5rem;
   align-self: center;
+  font-size: 1.6rem;
 }
 
 .introduction h3 {
@@ -107,7 +161,9 @@ nav {
 
 .projects {
   grid-area: projects;
-  margin-bottom: 3rem;
+  /* margin-bottom: 3rem; */
+  margin: 5rem;
+  font-size: 1.6rem;
 }
 
 h3 {
@@ -125,6 +181,13 @@ h3 {
 }
 .card {
   border: none;
+  text-align: center;
+}
+
+.card-title a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: blueviolet;
 }
 
 .about-me {
@@ -195,4 +258,41 @@ footer {
   justify-content: center;
   align-self: center;
   margin: 5rem;
+}
+
+@keyframes lighting {
+  0% {
+    text-shadow: 2px 2px 4px lightyellow;
+  }
+  5% {
+    text-shadow: 2px 2px 4px yellow;
+  }
+  30% {
+    text-shadow: 2px 2px 4px lightyellow;
+    font-style: italic;
+  }
+}
+
+@keyframes jumping {
+  0% {
+    transform: translateY(-5px);
+  }
+  20% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes jumpCircle {
+  10% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
 }

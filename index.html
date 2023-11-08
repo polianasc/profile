@@ -40,7 +40,7 @@
 
     <nav class="navbar navbar-expand-lg bg-light p-3">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#home">PS.</a>
+        <!-- <a class="navbar-brand" href="#home">PS.</a> -->
         <button
           class="navbar-toggler"
           type="button"
@@ -53,12 +53,12 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul
-            class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-center"
-          >
-            <!-- <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#home">Home</a>
-            </li> -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home"
+                >PS.</a
+              >
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="#projects">Projects</a>
             </li>
@@ -66,12 +66,7 @@
               <a class="nav-link" href="#aboutme">About me</a>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
-            <button class="btn btn-outline-success" type="">
-              <a href="#letstalk">Let's talk!</a>
-            </button>
-          </form>
+          <a href="#letstalk">Let's talk!</a>
         </div>
       </div>
     </nav>
@@ -79,13 +74,26 @@
     <header class="animation" id="home">
       <div class="photo"></div>
       <div>
-        <h1>Hey!</h1>
+        <h1 class="container-hey">
+          <!-- <span>H</span><span>e</span><span>y</span><span>!</span> -->
+          <!-- <span>👋</span> -->
+          Hey!
+        </h1>
       </div>
       <div>
         <h1>Poliana Schuelter here,</h1>
       </div>
       <div>
-        <h1>but you can call me <span>Poli</span></h1>
+        <h1>
+          but you can call me
+          <div class="container-name">
+            <!-- <span>P</span><span>o</span><span>l</span><span>i</span> -->
+            <div>P</div>
+            <div>o</div>
+            <div>l</div>
+            <div>l</div>
+          </div>
+        </h1>
       </div>
     </header>
     <section class="introduction">
@@ -102,13 +110,13 @@
       <h3>PROJECTS</h3>
       <div class="project-cards">
         <div class="card border-0" style="width: 35rem">
-          <img
-            src="./assets/Screenshot 2023-11-06 at 07.12.56.png"
-            class="card-img-top"
-            alt="..."
-          />
+          <img src="./assets/weatherapp.png" class="card-img-top" alt="..." />
           <div class="card-body">
-            <h5 class="card-title">Project 1</h5>
+            <h5 class="card-title">
+              <a href="https://incomparable-fairy-6a2ac2.netlify.app/"
+                >Weather App</a
+              >
+            </h5>
             <p class="card-text">
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
@@ -116,47 +124,18 @@
             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
           </div>
         </div>
-        <div class="card border-0" style="width: 35rem">
+        <div class="card border-0" style="width: 50rem">
           <img
-            src="./assets/Screenshot 2023-11-06 at 07.12.56.png"
+            src="./assets/Marceloswebsite.png"
             class="card-img-top"
             alt="..."
           />
           <div class="card-body">
-            <h5 class="card-title">Project 1</h5>
+            <h5 class="card-title"><a href="">Marcelo's website</a></h5>
             <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-          </div>
-        </div>
-        <div class="card border-0" style="width: 35rem">
-          <img
-            src="./assets/Screenshot 2023-11-06 at 07.12.56.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">Project 1</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-          </div>
-        </div>
-        <div class="card border-0" style="width: 35rem">
-          <img
-            src="./assets/Screenshot 2023-11-06 at 07.12.56.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">Project 1</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+                aqui a imagem vai ter opacidade e quero colocar uma faixa sobre a foto falando que vai ser lancado em breve
+              <!-- Some quick example text to build on the card title and make up the
+              bulk of the card's content. -->
             </p>
             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
           </div>
@@ -209,7 +188,7 @@
           placeholder="your best email goes here 😜"
           required
         />
-        <label for="Contact">Tell me, how can I help you:</label>
+        <label for="Contact">Tell me how can I help you?</label>
         <textarea name="Contact" id="contact" cols="25" rows="10"></textarea>
         <button>Send</button>
       </form>
