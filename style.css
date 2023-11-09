@@ -61,7 +61,6 @@ nav a:hover {
 .animation {
   grid-area: animation;
   margin: 0 7rem;
-  /* font-family: "Orbitron", sans-serif; */
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -145,10 +144,16 @@ nav a:hover {
   font-size: 1.6rem;
 }
 
-h3 {
+.projects h3 {
   border-top: 1px solid lightgray;
   padding: 3rem;
+  font-size: 5rem;
+  font-weight: bold;
   text-align: center;
+  color: blueviolet;
+  animation-name: lighting;
+  animation-duration: 2s;
+  animation-iteration-count: 3;
 }
 
 .project-cards {
@@ -168,7 +173,21 @@ h3 {
   text-decoration: none;
   color: blueviolet;
 }
+/* .card-marcelo {
+  opacity: 50%;
+} */
 
+.working {
+  opacity: 0;
+  color: blueviolet;
+  background-color: white;
+  animation-name: working;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .about-me {
   grid-area: about-me;
   margin-bottom: 3rem;
@@ -230,6 +249,21 @@ footer {
   }
   100% {
     transform: translateY(-5px);
+  }
+}
+
+@keyframes working {
+  2% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  50% {
+    opacity: 99;
+    transform: translateY(200px);
+  }
+
+  100% {
+    transform: translateY(350px);
   }
 }
 
