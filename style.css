@@ -11,7 +11,7 @@
 
 body {
   font-size: 1.6rem;
-  /* height: 100vh; */
+  height: 100vh;
   width: 100vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -24,15 +24,10 @@ body {
 }
 
 header,
-.animation
-/* .projects, */ {
+.animation {
   height: 100vh;
 }
 
-/* .about-me,
-.contact-me {
-  margin-top: 3rem;
-} */
 nav {
   grid-area: nav;
   font-size: 1.6rem;
@@ -173,13 +168,11 @@ nav a:hover {
   text-decoration: none;
   color: blueviolet;
 }
-/* .card-marcelo {
-  opacity: 50%;
-} */
 
 .working {
   opacity: 0;
   color: blueviolet;
+  border: 1px dashed yellow;
   background-color: white;
   animation-name: working;
   animation-duration: 5s;
@@ -277,5 +270,9 @@ footer {
       "introduction"
       "projects"
       "footer ";
+  }
+
+  header {
+    width: 100%;
   }
 }
