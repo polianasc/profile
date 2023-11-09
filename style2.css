@@ -17,15 +17,15 @@ body {
   /* border: 2rem solid blueviolet; */
   /* border-radius: 10px; */
   color: rgb(94, 91, 91);
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
   grid-template: "title form email";
-  gap: 2rem;
+  gap: 2rem; */
 }
 
 h1 {
-  grid-area: title;
+  /* grid-area: title; */
   margin-bottom: 1rem;
   background-color: blueviolet;
   color: white;
@@ -36,7 +36,7 @@ h1 {
   align-items: center;
 }
 form {
-  grid-area: form;
+  /* grid-area: form; */
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -62,7 +62,7 @@ form button {
 }
 
 h5 {
-  grid-area: email;
+  /* grid-area: email; */
   padding: 2rem;
   text-align: center;
 }

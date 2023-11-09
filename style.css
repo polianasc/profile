@@ -41,6 +41,7 @@ header,
 nav {
   grid-area: nav;
   font-size: 1.6rem;
+  width: 100%;
 }
 
 nav a {
