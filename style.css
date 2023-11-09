@@ -6,7 +6,7 @@
 
 :root {
   font-size: 62.5%;
-  /* font-family: "Quicksand", sans-serif; */
+  font-family: sans-serif;
 }
 
 body {
@@ -20,12 +20,7 @@ body {
     "nav        nav"
     "animation  introduction"
     "projects   projects"
-    /* "about-me   about-me" */
-    /* "contact-me contact-me" */
     "footer     footer";
-
-  /* background: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%);
-  color: white; */
 }
 
 header,
@@ -63,20 +58,6 @@ nav a:hover {
   color: white;
 }
 
-/* .links a i {
-  color: violet;
-} */
-
-/* .photo {
-  grid-area: photo;
-  height: 15rem;
-  width: 15rem;
-  border-radius: 50%;
-  background-color: blueviolet;
-  display: block;
-  margin: 2rem auto;
-} */
-
 .animation {
   grid-area: animation;
   margin: 0 7rem;
@@ -87,7 +68,7 @@ nav a:hover {
   justify-content: center;
 }
 
-.photo {
+.dot {
   height: 5rem;
   width: 5rem;
   border-radius: 50%;
@@ -102,9 +83,6 @@ nav a:hover {
   font-size: 35rem;
   font-style: bold;
 }
-/* .animation h1 span {
-  color: blueviolet;
-} */
 
 .container-hey {
   color: blueviolet;
@@ -210,50 +188,6 @@ h3 {
   align-items: center;
 }
 
-.contact-me {
-  /* grid-area: contact-me; */
-  /* font-size: 1.6rem; */
-  padding: 2rem;
-  border: 1px solid blueviolet;
-  border-radius: 10px;
-  /* color: rgb(94, 91, 91); */
-  display: block;
-  margin: 2rem auto;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.contact-me h4 {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.contact-me form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.contact-me input {
-  margin-bottom: 1rem;
-  line-height: 2rem;
-}
-
-.contact-me button {
-  margin-top: 1rem;
-  background-color: blueviolet;
-  width: 50%;
-  align-self: center;
-  color: white;
-  border-radius: 10px;
-  padding: 10px;
-  border: none;
-}
-
-.contact-me h5 {
-  padding: 2rem;
-  text-align: center;
-}
-
 footer {
   grid-area: footer;
   display: flex;
@@ -296,5 +230,18 @@ footer {
   }
   100% {
     transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 15px;
+    grid-template:
+      "nav"
+      "animation"
+      "introduction"
+      "projects"
+      "footer ";
   }
 }

@@ -6,48 +6,83 @@
 
 :root {
   font-size: 62.5%;
-  font-family: "Quicksand", sans-serif;
+  font-family: sans-serif;
 }
 
 body {
   font-size: 1.6rem;
   height: 100vh;
   width: 100vw;
-  padding: 5rem;
-  /* border: 2rem solid blueviolet; */
-  /* border-radius: 10px; */
-  color: rgb(94, 91, 91);
-  /* display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
-  grid-template: "title form email";
-  gap: 2rem; */
+  grid-template: "contact-me animation";
+  gap: 2rem;
 }
 
-h1 {
-  /* grid-area: title; */
+/* .title {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 8rem;
+  border: 2px solid blueviolet;
+  color: blueviolet;
+  text-align: center;
+  padding: 2rem;
+} */
+.contact-me {
+  color: rgb(94, 91, 91);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: contact-me;
+  height: 100vh;
+}
+
+.contact-me h1 {
   margin-bottom: 1rem;
   background-color: blueviolet;
   color: white;
-  height: 8rem;
+  height: 6rem;
   padding: 4rem;
-  border-radius: 5px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 70%;
 }
+
 form {
-  /* grid-area: form; */
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  border: 1px solid blueviolet;
-  border-radius: 5px;
+  gap: 0.9rem;
+  border: 2px solid blueviolet;
+  border-radius: 10px;
   padding: 2rem;
+  width: 70%;
 }
 
 form input {
   margin-bottom: 1rem;
   line-height: 2rem;
+  border: none;
+  background-color: rgba(138, 43, 226, 0.1);
+  padding: 5px;
+  border-radius: 10px;
+  /* color: white; */
+}
+
+/* form input:hover,
+form input:active {
+  border: 1px solid blueviolet;
+} */
+
+form textarea {
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(138, 43, 226, 0.1);
+  padding: 5px;
 }
 
 form button {
@@ -61,8 +96,83 @@ form button {
   border: none;
 }
 
-h5 {
-  /* grid-area: email; */
-  padding: 2rem;
+.email {
+  margin-top: 1rem;
+  background-color: blueviolet;
+  color: white;
+  height: 6rem;
+  padding: 4rem;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  width: 70%;
+}
+
+.email h4 {
+  font-weight: 400;
+  align-self: center;
+}
+
+.email a {
+  text-decoration: none;
+  color: white;
+  align-self: center;
+  padding: 5px;
+}
+
+.side {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(138, 43, 226, 0.7);
+  text-decoration: none;
+  animation: falling;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+.animation {
+  grid-area: animation;
+  background-color: white;
+  color: blueviolet;
+  height: 20rem;
+  width: 40rem;
+  border-radius: 10px;
+  display: flex;
+  align-self: center;
+  animation-name: squaremsg;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.animation h5 {
+  align-self: center;
   text-align: center;
+  font-size: medium;
+  padding: 3rem;
+}
+
+@keyframes squaremsg {
+  0% {
+    transform: translateX(-30px);
+  }
+
+  50% {
+    transform: translateY(-40px);
+  }
+
+  60% {
+    transform: translateX(-1px);
+  }
+
+  100% {
+    transform: translateY(1px);
+  }
+}
+
+
+@keyframes falling {
+  
 }
