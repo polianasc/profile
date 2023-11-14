@@ -6,11 +6,11 @@
 
 :root {
   font-size: 62.5%;
-  font-family: sans-serif;
 }
 
 body {
   font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
   height: 100%;
   width: 100%;
   display: grid;
@@ -21,22 +21,22 @@ body {
     "animation  introduction"
     "projects   projects"
     "footer     footer";
+  /* overflow-x: hidden; */
 }
 
-header,
 .animation {
-  height: 100%;
+  height: 100vh;
 }
 
 nav {
   grid-area: nav;
   font-size: 1.6rem;
   width: 100%;
-  height: 6rem;
+  height: 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5%;
+  padding: 10px;
   background-color: rgba(138, 43, 226, 0.1);
 }
 
@@ -53,10 +53,6 @@ nav a:hover {
   background-color: blueviolet;
   color: white;
   transition: 0.8s;
-}
-
-.nav-item a:hover {
-  color: white;
 }
 
 .animation {
@@ -117,8 +113,8 @@ nav a:hover {
 
 .introduction {
   grid-area: introduction;
-  margin: 6rem;
-  padding: 0 5rem;
+  margin: 10%;
+  /* padding: 0 5rem; */
   align-self: center;
   font-size: 1.6rem;
 }
@@ -211,6 +207,7 @@ footer {
   display: flex;
   justify-content: center;
   align-self: center;
+  padding-bottom: 2rem;
   /* margin: 5rem; */
 }
 
@@ -278,7 +275,71 @@ footer {
       "footer ";
   }
 
-  header {
-    width: 473px;
+  .animation {
+    width: 60%;
+    margin: 0;
+  }
+
+  .animation div {
+    font-size: 20rem;
+  }
+
+  .container-name div:nth-of-type(2) {
+    font-size: 16rem;
+  }
+  .container-name div:nth-of-type(4) {
+    font-size: 16rem;
+  }
+
+  .introduction {
+    display: none;
+  }
+
+  .card {
+    margin: 0;
+  }
+
+  .projects {
+    margin: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .dot {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .animation {
+    width: 60%;
+    height: fit-content;
+    margin: 5rem;
+  }
+
+  .animation div {
+    font-size: 20rem;
+  }
+
+  .container-name div:nth-of-type(2) {
+    font-size: 16rem;
+  }
+  .container-name div:nth-of-type(4) {
+    font-size: 16rem;
+  }
+
+  .introduction {
+    height: fit-content;
+    width: 70%;
+  }
+
+  .introduction-P {
+    display: none;
+  }
+
+  .project-cards {
+    margin: 0;
+  }
+  .project-cards img {
+    max-width: fit-content;
   }
 }
