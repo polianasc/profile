@@ -263,7 +263,7 @@ footer {
   }
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   body {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 2rem;
@@ -302,8 +302,8 @@ footer {
   .projects {
     margin: 0;
   }
-}
-
+} */
+/* 
 @media (max-width: 576px) {
   .dot {
     height: 3rem;
@@ -342,4 +342,4 @@ footer {
   .project-cards img {
     max-width: fit-content;
   }
-}
+} */
